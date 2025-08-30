@@ -1,6 +1,6 @@
 .PHONY: up build daemon down clean logs
 
-MONGO_CONTAINER=mongo
+MONGO_CONTAINER=mongo_nyc_parcel
 MONGO_USER=admin
 MONGO_PASS=admin123
 MONGO_AUTH_DB=admin
@@ -8,7 +8,7 @@ MONGO_BACKUP_DIR=./mongo_backup
 MONGO_DUMP_PATH=/data/dump
 
 # List of databases to export
-MONGO_DBS=
+MONGO_DBS=nyc
 
 build:
 	docker-compose build
@@ -16,7 +16,7 @@ build:
 up:
 	docker-compose up
 
-daemon:
+upd:
 	docker-compose up -d
 
 down:
